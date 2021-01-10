@@ -27,18 +27,21 @@ main
     }
     return 0;
 }
-
+//get the smallest
 int getSmallest(int list[], int lo, int hi){
     int small = lo;
     for(int h = lo + 1; h <= hi; h ++)
         if(list[small] > list[h]) small = h;
     return small;
 }
+
+//swap
 void swap(int list[], int a, int b){
     int temp = list[a];
     list[a] = list[b];
     list[b] = temp;
 }
+//selection sort
 void selection_sort(int list[], int lo, int hi){
     for(int h = lo; h < hi; h ++){
         int s = getSmallest(list, h, hi);
